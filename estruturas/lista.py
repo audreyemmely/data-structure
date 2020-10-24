@@ -1,6 +1,6 @@
 import csv
 
-with open('../dados/USvideos.csv') as csv_file:
+with open('dados/USvideos.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     csv_reader.__next__()
 
