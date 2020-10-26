@@ -43,7 +43,7 @@ def listMenu(csvData):
 
 
 
-with open('dados/USvideos.csv', 'r') as csvFile:
+with open('../dados/USvideos.csv', 'r') as csvFile:
     csvData = csv.reader(csvFile, delimiter = ',')
     csvData.__next__()
 
