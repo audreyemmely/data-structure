@@ -33,7 +33,7 @@ def listMenu(csvData):
             if(list.isEmpty()):
                 print("A lista está vazia.\n")
             else:
-                deleteOption = input("\nDigite o titulo que será deletado: ")
+                deleteOption = input("\nDigite o ID do titulo que será deletado: ")
                 print(list.delete(deleteOption))
         elif (option == 4):
             print("Saindo do Menu\n")
@@ -43,7 +43,7 @@ def listMenu(csvData):
 
 
 
-with open('../dados/USvideos.csv', 'r') as csvFile:
+with open('../dados/USvideos.csv', 'r', encoding='utf8') as csvFile:
     csvData = csv.reader(csvFile, delimiter = ',')
     csvData.__next__()
 

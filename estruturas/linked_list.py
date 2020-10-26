@@ -26,22 +26,22 @@ class LinkedList:
             print(aux.nodeValue)
             aux = aux.nextNode
     
-    # Pode ser melhor deletar o dado pelo video_id e não pelo titulo
-    def delete(self, title):
+    # Deleta o dado pelo video_id 
+    def delete(self, video_id):
         # Melhorar isso aqui, bagunça do carai
-        if(self.head.nodeValue.title.lower() == title.lower()):
+        if(self.head.nodeValue.video_id.lower() == video_id.lower()):
             self.head = self.head.nextNode
-            return title +" foi deletado.\n"
+            return video_id +" foi deletado.\n"
         else:
             aux = self.head
             previous = None
             while (aux.nextNode != None):
                 previous = aux
                 aux = aux.nextNode
-                if(aux.nodeValue.title.lower() == title.lower() and aux.nextNode != None):
+                if(aux.nodeValue.video_id.lower() == video_id.lower() and aux.nextNode != None):
                     previous.nextNode = aux.nextNode
-                    return title +" foi deletado.\n"
-                elif(aux.nodeValue.title.lower() == title.lower() and aux.nextNode == None):
+                    return video_id +" foi deletado.\n"
+                elif(aux.nodeValue.video_id.lower() == video_id.lower() and aux.nextNode == None):
                     previous.nextNode = None
-                    return title +" foi deletado.\n"
-            return title +" não está na lista.\n"
+                    return video_id +" foi deletado.\n"
+            return video_id +" não está na lista.\n"
