@@ -6,15 +6,15 @@ class Elemento:
 
 class Pilha:
   def __init__(self):
-    self.topo = None # pilha inicia vazia
+    self.topo = None 
   
-  def vazia(self): # não recebe nada, apenas informa se a pilha está vazia ou não
+  def vazia(self): 
     if self.topo == None:
       print ("A pilha está vazia\n")
     else:
       print ("A pilha não está vazia\n")
 
-  def empilhar(self, novo_conteudo): # adiciona um conteúdo na pilha
+  def empilhar(self, novo_conteudo): 
     novo_elemento = Elemento(novo_conteudo, self.topo)
     self.topo = novo_elemento
     print("Elemento {} foi inserido no topo da pilha\n".format(novo_elemento.conteudo))
