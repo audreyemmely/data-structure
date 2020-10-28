@@ -64,7 +64,7 @@ def stackMenu(data):
           if opcao == 1:
               minha_pilha.vazia()
           elif opcao == 2: 
-              conteudo_informado = int(input("\nDigite o índice do elemento que você deseja inserir: "))
+              conteudo_informado = int(input("\nDigite a posição do elemento que você deseja inserir: "))
               data = data.sample(100)
               minha_pilha.empilhar(data.iloc[conteudo_informado]) 
           elif opcao == 3:
