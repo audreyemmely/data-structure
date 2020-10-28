@@ -26,7 +26,7 @@ class Pilha:
       print("A pilha está vazia\n")
     elemento_excluido = self.topo
     self.topo = self.topo.proximo
-    exclusao_feita = elemento_excluido  # só removi o .conteudo
+    exclusao_feita = elemento_excluido
     del elemento_excluido
     print("Elemento ({}) foi excluído do topo da pilha\n".format(exclusao_feita))
 
