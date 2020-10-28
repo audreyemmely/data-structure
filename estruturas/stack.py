@@ -23,7 +23,7 @@ class Pilha:
       print("A pilha está vazia\n")
     elemento_excluido = self.topo
     self.topo = self.topo.proximo
-    exclusao_feita = elemento_excluido  # só removi o .conteudo
+    exclusao_feita = elemento_excluido
     del elemento_excluido
     print("Elemento ({}) foi excluído do topo da pilha\n".format(exclusao_feita))
 
@@ -42,6 +42,6 @@ class Pilha:
       print("A pilha está vazia\n")
     ver_conteudo = self.topo
     while ver_conteudo != None:
-      print(ver_conteudo.conteudo) # tava usando uma variavel numero que n tinha sido definida, simplesmente troquei por "conteudo" e lansei um \n pra ficar bonitinho
+      print(ver_conteudo.conteudo)
       print("\n")
       ver_conteudo = ver_conteudo.proximo
