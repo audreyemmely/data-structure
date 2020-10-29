@@ -35,9 +35,8 @@ class Pilha:
       print("A pilha está vazia\n")
     elemento_excluido = self.topo
     self.topo = self.topo.proximo
-    exclusao_feita = elemento_excluido
+    print("Elemento ({}) foi excluído do topo da pilha\n".format(elemento_excluido.conteudo))
     del elemento_excluido
-    print("Elemento ({}) foi excluído do topo da pilha\n".format(exclusao_feita))
 
   def tamanho(self):
     if (self.topo == None):

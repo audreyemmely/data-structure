@@ -1,4 +1,3 @@
-from csv_model import CsvModel
 from linked_list import LinkedList
 import pandas as pd
 csvData = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/USvideos.csv', encoding = "UTF-8")
@@ -40,22 +39,7 @@ def listMenu(csvData):
         else:
             print("Tem 4 opções, escolha uma\n")
 
-while(True):
-    print("1 - Lista")
-    print("2 - Pilha")
-    print("3 - Sair")
-
-    option = int(input("\nDigite a sua escolha: "))
-
-    if(option == 1):
-        listMenu(csvData)
-    elif(option == 2):
-        print("......")
-    elif(option == 3):
-        print("Saindo do programa...")
-        break
-    else:
-        print("Digite certo ai, na moral")
+listMenu(csvData)
     
 
     
