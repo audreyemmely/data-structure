@@ -7,3 +7,16 @@ Este conjunto de dados inclui vários meses de dados sobre tendências diárias 
 Os dados de cada região estão em um arquivo separado. Os dados incluem o título do vídeo, título do canal, tempo de publicação, tags, visualizações, likes e dislikes, descrição e contagem de comentários.
 
 Disponibilizada pelo [Kaggle](https://www.kaggle.com/datasnaek/youtube-new).
+
+## Sobre a utilização
+Para utilizar os códigos é preciso clonar o repositório. Abra o seu terminal, configure o caminho onde você deseja salvar o repositório na sua máquina local e digite o seguinte comando:
+```
+git clone https://github.com/audreyemmely/estrutura-de-dados.git
+```
+Faz-se necessário a instalação da seguinte biblioteca, caso não esteja instalada:
+```
+pandas
+```
+Saiba como instalá-la aqui:
+
+[Pandas](https://pandas.pydata.org/docs/getting_started/install.html)
