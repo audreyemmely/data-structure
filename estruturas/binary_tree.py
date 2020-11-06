@@ -32,12 +32,12 @@ class Node:
                 if self.left == None:
                     self.left = Node(data)
                 else:
-                    self.left.insertByViews(data)
+                    self.left.insertByTitle(data)
             elif data[2] > self.data[2]:
                 if self.right == None:
                     self.right = Node(data)
                 else:
-                    self.right.insertByViews(data)
+                    self.right.insertByTitle(data)
         else:
             self.data = data
 
