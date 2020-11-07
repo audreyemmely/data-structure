@@ -1,4 +1,4 @@
-# Importando a biblioteca Pandas para inserindo os dados do CSV
+# Importando a biblioteca Pandas para inserir os dados do CSV
 import pandas as pd
 data = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/USvideos.csv', encoding = "UTF-8")
 
