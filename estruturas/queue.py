@@ -18,7 +18,7 @@ class Queue:
         else:
             print ("A fila não está vazia\n")
     
-    # REMOVENDO ELEMENTO POR ELEMENTO
+    # Inserindo um elemento por vez
     def push(self, newNode):
         newContent = Node(newNode)
         newContent.next = None
@@ -32,6 +32,7 @@ class Queue:
             last.next = newContent
             print("Elemento {} foi inserido na fila\n".format(newContent.value))
 
+    # Removendo um elemento por vez
     def pop(self):
         if self.head == None:
             print("A fila está vazia\n")
