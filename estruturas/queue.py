@@ -62,35 +62,34 @@ class Queue:
             showContent = showContent.next
 
 def menu(data):
-    while(True):
-        myQueue = Queue()
-        while(True):
-            print("---Menu da Fila---")
-            print("1 - Checar se está vazia ou não")
-            print("2 - Adicionar à fila")
-            print("3 - Remover da fila")
-            print("4 - Informar tamanho da fila")
-            print("5 - Listar fila")
-            print("6 - Sair")
+      myQueue = Queue()
+      while(True):
+          print("---Menu da Fila---")
+          print("1 - Checar se está vazia ou não")
+          print("2 - Adicionar à fila")
+          print("3 - Remover da fila")
+          print("4 - Informar tamanho da fila")
+          print("5 - Listar fila")
+          print("6 - Sair")
 
-            option = int(input("\nInforme a opção: "))
+          option = int(input("\nInforme a opção: "))
 
-            if option == 1:
-                myQueue.isEmpty()
-            elif option == 2: 
-                content = int(input("\nDigite o elemento que você deseja inserir: "))
-                data = data.sample(100)
-                myQueue.push(data.iloc[content]) 
-            elif option == 3:
-                myQueue.pop() 
-            elif option == 4:
-                print("A fila contém {} elementos\n".format(myQueue.length())) 
-            elif option == 5:
-                myQueue.showQueue()
-            elif option == 6:
-                print("Até a próxima! :D\n")
-                break
-            else:
-                print("Opção inválida, digite uma opção mostrada no menu!\n")
+          if option == 1:
+              myQueue.isEmpty()
+          elif option == 2: 
+              content = int(input("\nDigite o elemento que você deseja inserir: "))
+              data = data.sample(100)
+              myQueue.push(data.iloc[content]) 
+          elif option == 3:
+              myQueue.pop() 
+          elif option == 4:
+              print("A fila contém {} elementos\n".format(myQueue.length())) 
+          elif option == 5:
+              myQueue.showQueue()
+          elif option == 6:
+              print("Até a próxima! :D\n")
+              break
+          else:
+              print("Opção inválida, digite uma opção mostrada no menu!\n")
 
 menu(data)
