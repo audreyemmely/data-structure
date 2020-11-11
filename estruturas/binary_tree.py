@@ -1,5 +1,5 @@
 import pandas as pd
-csvData = pd.read_csv('dados/USvideos.csv', encoding = "UTF-8")
+csvData = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/USvideos.csv', encoding = "UTF-8")
 
 class Node:
 
@@ -43,9 +43,9 @@ class Node:
     def deleteNode(self, currentNode, nodeToDelete, index):
         if currentNode == None:
             return currentNode
-        if(nodeToDelete < currentNode.data[index]):
+        if(nodeToDelete < int(currentNode.data[index])):
             currentNode.left = self.deleteNode(currentNode.left, nodeToDelete, index)
-        elif(nodeToDelete > currentNode.data[index]):
+        elif(nodeToDelete > int(currentNode.data[index])):
             currentNode.right = self.deleteNode(currentNode.right, nodeToDelete, index)
         else:
             if currentNode.left == None:
