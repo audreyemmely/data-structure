@@ -1,5 +1,5 @@
 import pandas as pd
-csvData = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/USvideos.csv', encoding = "UTF-8")
+csvData = pd.read_csv('dados/USvideos.csv', encoding = "UTF-8")
 
 class Node:
 
@@ -55,7 +55,7 @@ class Node:
             else:
                aux = self.findsuccessor(currentNode.right)
                currentNode.data = aux
-               currentNode.right = self.deleteNode(currentNode.right, aux, index)
+               currentNode.right = self.deleteNode(currentNode.right, int(aux), index)
         return currentNode
 
 #-------------------MAIN-----------------------------
