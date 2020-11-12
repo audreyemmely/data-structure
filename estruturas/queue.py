@@ -54,7 +54,7 @@ class Queue:
 
     def showQueue(self):
         if self.head == None:
-            print("A pilha está vazia\n")
+            print("A fila está vazia\n")
         showContent = self.head
         while showContent != None:
             print(showContent.value)
