@@ -42,6 +42,7 @@ class Node:
     
     
     def findsuccessor(self, currentNode):
+        #quando sair do while, "currentNode" será o nó mais à esquerda da subárvore à direita
         while currentNode.left != None:
             currentNode = currentNode.left
         return currentNode.data
