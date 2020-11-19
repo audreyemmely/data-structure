@@ -27,10 +27,13 @@ class Node:
 
 
     def showTree(self): #Em ordem
+        #percorre a subárvore da esquerda
         if self.left:
             self.left.showTree()
-        print( self.data),
+        #visita a raiz
+        print(self.data),
         print("\n")
+        #percorre a subárvore da direita
         if self.right:
             self.right.showTree()
     
