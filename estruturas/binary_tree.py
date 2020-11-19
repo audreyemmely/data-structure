@@ -12,17 +12,20 @@ class Node:
     def insertNode(self, data, index):
 
         if self.data[index]:
+            #o nodo deve ser inserido na subárvore esquerda
             if data[index] < self.data[index]:
                 if self.left == None:
                     self.left = Node(data)
                 else:
                     self.left.insertNode(data, index)
+            #o nodo deve ser inserido na subárvore direita
             elif data[index] > self.data[index]:
                 if self.right == None:
                     self.right = Node(data)
                 else:
                     self.right.insertNode(data, index)
         else:
+            #o nodo deve ser inserido na raiz
             self.data = data
 
 
