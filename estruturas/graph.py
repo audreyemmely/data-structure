@@ -127,5 +127,5 @@ dest = input("Vértice de destino:")
 dijkstra(graph, origin, dest)
 
 
-for x in graph.vertices:#dps apagar, só para teste
-    print(x.hero, " distance-> " , x.minDistance, " previous -> ", x.previous)
+#for x in graph.vertices:#só para teste
+#    print(x.hero, " distance-> " , x.minDistance, " previous -> ", x.previous)
