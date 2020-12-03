@@ -73,20 +73,27 @@ def dijkstra(graph, origin, dest):# vai calcular a menor distância possivel do 
 
 def showPath(graph ,origin, dest):
     vertex = graph.search(dest)
-    if(vertex.previous == -1):
-        print("-------------------------------------------------")
-        print("Não há um caminho entre [",origin,"] e [",dest,"]")
-        print("-------------------------------------------------")
+    if(vertex != None):
+        if(vertex.previous == -1):
+            print("-------------------------------------------------")
+            print("Não há um caminho entre [",origin,"] e [",dest,"]")
+            print("-------------------------------------------------")
+        else:
+            print("-------------------------------")
+            print("A distância de [",origin,"] até [",dest,"] é de:",vertex.minDistance,"aresta(s)")
+            print("-------------------------------")
+            print("Caminho do destino até a origem")
+            print(vertex.hero)
+            while vertex.previous != -1:
+                print(vertex.previous)
+                vertex = graph.search(vertex.previous)
+            print("---------------------------------")
     else:
-        print("-------------------------------")
-        print("A distância de [",origin,"] até [",dest,"] é de:",vertex.minDistance,"aresta(s)")
-        print("-------------------------------")
-        print("Caminho do destino até a origem")
-        print(vertex.hero)
-        while vertex.previous != -1:
-            print(vertex.previous)
-            vertex = graph.search(vertex.previous)
-        print("---------------------------------")
+        print("--------------------------------------")
+        print("O vértice de destino não está no grafo")
+        print("--------------------------------------")
+
+    
     
 
 def createVertex(connection):#cria um vértice para a conexão, caso ele não esteja no grafo
