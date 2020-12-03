@@ -1,5 +1,5 @@
 import pandas as pd
-csvData = pd.read_csv('dados/hero-network.csv', encoding = "UTF-8")
+csvData = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/hero-network.csv', encoding = "UTF-8")
 
 class Vertex:
     
