@@ -33,7 +33,7 @@ class LinkedList:
             dataList.insert(END, "Views: "+str(aux.nodeValue[7]))
             dataList.insert(END, "Likes: "+str(aux.nodeValue[8]))
             dataList.insert(END, "Dislikes: "+str(aux.nodeValue[9]))
-            dataList.insert(END, "--------------------------------")
+            dataList.insert(END, "---------------------------------------------------------------------------------------------")
             
             aux = aux.nextNode
     
@@ -103,6 +103,7 @@ class LinkedListView:
         yscrollbar = Scrollbar(viewContainer, orient="vertical")
         xscrollbar = Scrollbar(viewContainer, orient="horizontal")
         self.dataList = Listbox(viewContainer, width=60, height=15)
+        self.dataList["font"] = ("Verdana", "8", "bold")
         yscrollbar["command"] = self.dataList.yview
         xscrollbar["command"] = self.dataList.xview
         self.dataList["yscrollcommand"] = yscrollbar.set
@@ -115,10 +116,10 @@ class LinkedListView:
         viewButton.pack(side=LEFT,pady=10, padx=10)
     
     def showViewData(self):
+        self.dataList.delete(0, END)#deletando todos o itens que estavam na lista
         if(self.linkedList.isEmpty()):
             self.msg["text"] = "A lista está vazia."
         else:
-            self.dataList.delete(0, END)#deletando todos o itens que estavam na lista
             self.linkedList.showList(self.dataList)
 
     def deleteOption(self):

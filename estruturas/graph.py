@@ -103,7 +103,7 @@ def createVertex(connection):#cria um vértice para a conexão, caso ele não es
         graph.vertices.append(vertex)
 
 graph = Graph()
-option = int(input("Quantos vértices serão adcionados? "))
+option = int(input("Quantos vértices serão adicionados? "))
 i = 0
 while i < option:
     data = csvData.iloc[i]#vai pegando linha por linha em ordem do arquivo 

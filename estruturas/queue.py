@@ -19,7 +19,7 @@ class Queue:
             print ("A fila não está vazia\n")
     
     # Inserindo um elemento por vez
-    def push(self, newNode):
+    def enqueue(self, newNode):
         newContent = Node(newNode)
         newContent.next = None
         if self.head == None:
@@ -33,7 +33,7 @@ class Queue:
             print("Elemento {} foi inserido na fila\n".format(newContent.value))
 
     # Removendo um elemento por vez
-    def pop(self):
+    def dequeue(self):
         if self.head == None:
             print("A fila está vazia\n")
         else:
@@ -79,9 +79,9 @@ def menu(data):
           elif option == 2: 
               content = int(input("\nDigite o elemento que você deseja inserir: "))
               data = data.sample(100)
-              myQueue.push(data.iloc[content]) 
+              myQueue.enqueue(data.iloc[content]) 
           elif option == 3:
-              myQueue.pop() 
+              myQueue.dequeue() 
           elif option == 4:
               print("A fila contém {} elementos\n".format(myQueue.length())) 
           elif option == 5:

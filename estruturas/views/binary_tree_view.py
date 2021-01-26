@@ -2,7 +2,7 @@ from tkinter import *
 import pandas as pd
 csvData = pd.read_csv('dados/USvideos.csv', encoding = "UTF-8")
 
-class Node:
+class TreeNode:
 
     def __init__(self, data):
 
@@ -16,13 +16,13 @@ class Node:
             #o nodo deve ser inserido na subárvore esquerda
             if data[index] < self.data[index]:
                 if self.left == None:
-                    self.left = Node(data)
+                    self.left = TreeNode(data)
                 else:
                     self.left.insertNode(data, index)
             #o nodo deve ser inserido na subárvore direita
             elif data[index] > self.data[index]:
                 if self.right == None:
-                    self.right = Node(data)
+                    self.right = TreeNode(data)
                 else:
                     self.right.insertNode(data, index)
         else:
@@ -42,7 +42,8 @@ class Node:
         dataList.insert(END, "Views: "+str(self.data[7]))
         dataList.insert(END, "Likes: "+str(self.data[8]))
         dataList.insert(END, "Dislikes: "+str(self.data[9]))
-        dataList.insert(END, "--------------------------------")
+        dataList.insert(END, "Comment Count: "+str(self.data[10]))
+        dataList.insert(END, "---------------------------------------------------------------------------------------------")
         #print(self.data),
         #print("\n")
         #percorre a subárvore da direita
@@ -71,14 +72,14 @@ class Node:
             else:
                aux = self.findsuccessor(currentNode.right)
                currentNode.data = aux
-               currentNode.right = self.deleteNode(currentNode.right, int(aux), index)
+               currentNode.right = self.deleteNode(currentNode.right, aux, index)
         return currentNode
 
 
 class BinaryTreeView:
     def __init__(self, master=None):
         self.data = csvData.sample(100)
-        self.root = Node(self.data.iloc[0])
+        self.root = TreeNode(self.data.iloc[0])
 
         #self.treeWindow = Toplevel(bg="white")
 
@@ -134,6 +135,7 @@ class BinaryTreeView:
         yscrollbar = Scrollbar(viewContainer, orient="vertical")
         xscrollbar = Scrollbar(viewContainer, orient="horizontal")
         self.dataList = Listbox(viewContainer, width=60, height=15)
+        self.dataList["font"] = ("Verdana", "8", "bold")
         yscrollbar["command"] = self.dataList.yview
         xscrollbar["command"] = self.dataList.xview
         self.dataList["yscrollcommand"] = yscrollbar.set
