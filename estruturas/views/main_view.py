@@ -1,7 +1,9 @@
 from tkinter import *
 import pandas as pd
-csvData = pd.read_csv('dados/USvideos.csv', encoding = "UTF-8")
-csvGraphData = pd.read_csv('dados/hero-network.csv', encoding = "UTF-8")
+csvData = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/USvideos.csv', encoding = "UTF-8")
+csvGraphData = pd.read_csv('https://raw.githubusercontent.com/audreyemmely/estrutura-de-dados/main/dados/hero-network.csv', encoding = "UTF-8")
+
+#Só precisa rodar esse código para funcionar a interface, todos códigos do view estão aqui
 
 #------------------------------------------------LinkedList-----------------------------------       
 class Node:
